@@ -17,6 +17,7 @@ function startCamera() {
             })
             .catch(err => {
                 console.error('Error accessing camera: ', err);
+                statusText.textContent = 'Error accessing camera.';
             });
     } else {
         statusText.textContent = 'Already scanning!';
@@ -60,11 +61,12 @@ function scanQRCode() {
             if (data.status === 'success') {
                 statusText.textContent = `QR Code: ${data.qr_data}`;
             } else {
-                statusText.textContent = 'No QR code detected';
+                statusText.textContent = data.message || 'No QR code detected';
             }
         })
         .catch(err => {
             console.error('Error scanning QR code: ', err);
+            statusText.textContent = 'Error scanning QR code.';
         });
     });
 
@@ -73,4 +75,3 @@ function scanQRCode() {
         setTimeout(scanQRCode, 1000);
     }
 }
-

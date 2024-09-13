@@ -18,6 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 100vh;
 }
 
 .container {
@@ -27,6 +28,7 @@ body {
     justify-content: center;
     width: 100%;
     max-width: 800px;
+    height: 100%;
 }
 
 h1 {
@@ -45,7 +47,7 @@ video {
     width: 80%;
     max-width: 600px;
     height: auto;
-    border: 2px solid black;
+    border: 2px solid white;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
@@ -59,11 +61,12 @@ video {
     justify-content: space-around;
     margin-top: 30px;
     width: 100%;
+    max-width: 600px;
 }
 
 button {
     font-size: 2em;
-    padding: 20px 45px;
+    padding: 5px 25px;
     background-color: #007BFF;
     color: white;
     border: none;
